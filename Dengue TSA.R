@@ -7,7 +7,7 @@ library(aTSA)
 library(fGarch)
 library(Metrics)
 
-Dengue <- read_excel("D:/Data for Research/DOH/Diseases Statistics [for TSA].xlsx", sheet = "Will Be Used") #Check if there's Week 52
+Dengue <- read_excel("D:/Data for Research/DOH/Diseases Statistics [for TSA].xlsx", sheet = "Will Be Used") 
 
 Dengue_TS <-ts(Dengue$Treated, frequency = 52, start = c(2017,1), end = c(2022, 40))
 Dengue_df <- data.frame(Cases = as.matrix(Dengue_TS), Year = time(Dengue_TS))
